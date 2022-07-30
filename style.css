@@ -1,0 +1,209 @@
+:root {
+  --bluewhite: #f0f5ff;
+  --offwhite: #fcfcfc;
+  --bluemid: #83a2d2;
+  --grayheader: #424550;
+  --offblack: #1f1f1f;
+
+  --headerfont: 20px;
+  --standardfont: 16px;
+  
+  --gap: 2vw;
+  --sidepadding: 5vw;
+}
+
+html, body {
+  background-color: var(--bluewhite);
+  color: var(--offblack);
+  
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: var(--standardfont);
+  letter-spacing: 1px;
+  
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden; 
+  
+  scroll-behavior: smooth;
+}
+
+.mainContent {
+  padding: 0px var(--sidepadding) 0px var(--sidepadding);
+}
+
+.halfGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: var(--gap);
+}
+
+.topBar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+h1 {
+  background-color: var(--grayheader);
+  
+  color: var(--bluemid);
+  font-size: var(--headerfont);
+  
+  margin: 0%;
+  padding: 20px var(--sidepadding) 20px var(--sidepadding);
+}
+
+span {
+  position: absolute;
+  right: 75px;
+  font-weight: bold;
+}
+
+.name {
+  top: 20px;
+}
+
+.name > a {
+  color: var(--bluemid);
+  font-size: var(--headerfont);
+  
+  text-decoration: none;
+}
+
+.year {
+  color: var(--grayheader);
+  font-size: var(--standardfont);
+  
+  text-decoration: none;
+  
+  top: 70px;
+  margin-left: 40px;
+}
+
+nav {
+  background-color: var(--bluemid);
+  
+  padding: 10px var(--sidepadding) 10px var(--sidepadding);
+}
+
+nav > a {
+  color: var(--bluewhite);
+  font-size: var(--standardfont);
+  font-weight: bold;
+  
+  letter-spacing: 2px;
+  text-decoration: none;
+  
+  margin-right: 40px;
+}
+
+.current {
+  color: var(--grayheader);
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 0%;
+}
+
+img {
+  margin: 10px 0px 10px 0px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 20px 0px 10px 0px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 10px 0px 10px 0px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 10px 0px 10px 0px;
+}
+
+.jump {
+  text-align: center;
+}
+
+.jump > a {
+  color: var(--bluemid);
+  font-size: var(--standardfont);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.fullWidth {
+  width: 90vw;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* -> colours */
+
+.imageSquare {
+  margin: 0px;
+  width: 30vw; 
+  height: 30vw; 
+  object-fit: cover;
+}
+
+.imageWrap {
+  position: relative;
+  width: 30vw; 
+  height: 30vw; 
+}
+
+.imageText {
+  background-color: #424550aa;
+  color: var(--offwhite);
+  font-size: 10wv;
+  
+  visibility: hidden;
+  opacity: 0;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  padding: var(--sidepadding);
+
+  transition: opacity .2s, visibility .2s;
+}
+
+.imageWrap:hover .imageText {
+  visibility: visible;
+  opacity: 1;
+}
+
+#textWhite {
+  color: var(--offwhite);
+  font-weight: lighter;
+  
+  margin: 0;
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+}
+
+#textBlack {
+  color: var(--offblack);
+  font-weight: lighter;
+  
+  margin: 0;
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+}
+
+#colourPicker {
+  width: 100%;
+  height: 100px;
+}
